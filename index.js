@@ -3,7 +3,8 @@ const PORT = 3000;
 
 function requestHandler(req, res) {
     console.log("hello jee kaise ho saare");
-    res.end('hello I am a Page!');
+    res.writeHead(200,{'context-type': 'text/html'});
+    res.end('<h1>Got it!</h1>');
 }
 const server = http.createServer(requestHandler);
 
